@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
         trans_serial(*B);
         sum += time_now() - t0;
     }
-    printf("0     1        %.1f\n", sum / 10.0 / repeat);
+    printf("0     1        %.2f\n", sum / 10.0 / repeat);
 
     for (unsigned i = 1; i <= HC; ++i)
     {
@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
             trans_block(*B, i);
             sum += time_now() - t0;
         }
-        printf("1     %-2d       %.1f\n", i, sum / 10.0 / repeat);
+        printf("1     %-2d       %.2f\n", i, sum / 10.0 / repeat);
     }
     for (unsigned i = 1; i <= HC; ++i)
     {
@@ -47,7 +47,7 @@ int main(int argc, char const *argv[])
             trans_terrace(*B, i);
             sum += time_now() - t0;
         }
-        printf("1     %-2d       %.1f\n", i, sum / 10.0 / repeat);
+        printf("2     %-2d       %.2f\n", i, sum / 10.0 / repeat);
     }
     return 0;
 }

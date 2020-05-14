@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -N mat_transpose
+#PBS -q qstudent
+#PBS -l nodes=1:ppn=16
+#PBS -o /data/home/T3018216241/data/mat_transpose_xhx.out
+#PBS -e /data/home/T3018216241/data/mat_transpose_xhx.err
+
+cd /data/home/T3018216241
+./test
